@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina inicial</title>
+</head>
+<body>
+    <h1>Páginial principal seu comédia nesta merda</h1>
+
+    <button onclick="get()">GET</button>
+    <button onclick="post()">POST</button>
+    <button onclick="put()">PUT</button>
+    <button onclick="delet()">DELETE</button>
+
+    <script>
+        const url = "http://localhost:3000/teste"
+        function get() {
+            fetch(url, {
+               method:"get" 
+            }).then(res => {
+                console.log(res)
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+
+        function post() {
+            fetch(url, {
+               method:"post" 
+            }).then(res => {
+                console.log(res)
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+        function put() {
+            fetch(url, {
+               method:"put" 
+            }).then(res => {
+                console.log(res)
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+
+        function delet() {
+            fetch(url, {
+               method:"delete" 
+            }).then(res => {
+                console.log(res)
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+
+
+
+    </script>
+</body>
+</html>
